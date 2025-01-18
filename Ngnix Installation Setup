@@ -1,0 +1,16 @@
+sudo apt update
+# before installing any packages run this cmd and it will store updated pckages.
+sudo apt install nginx
+# install nginx application
+sudo systemctl status nginx
+# shown the service status of nginx application. 
+sudo systemctl start nginx
+# if service is not active run this cmd.
+# enable port 80 in security group in inbound rules. 
+# copy public ip and paste in browser with port number after it will shown in ngnix 
+# cd /var/www/html - change directory to html folder
+sudo chmod 744 /var/www/html 
+# it will change permission for owner RWE permission
+# vim index.nginx-debian.html - open index.nginx file in vim mode
+# Edit the content what we want to shown in browser through nginx application
+# save and refresh the browser.
