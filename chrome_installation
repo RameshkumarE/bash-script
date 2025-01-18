@@ -1,0 +1,13 @@
+#!/bin/bash
+l=$(which google-chrome)
+if [ "$l" == "/usr/bin/google-chrome" ]
+then
+v=$(google-chrome --version | awk '{print $3}')
+echo "google chrome already installed and version is $v"
+else
+echo "(now downloading and installing chrome for ubuntu)"
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+v=$(google-chrome --version | awk '{print $3}')
+echo "google-chrome version is :$v"
+fi
