@@ -1,0 +1,60 @@
+1) Directory exist checking script
+
+#!/bin/bash
+read -p "Enter the directory name u want to search:" a
+        if [ -d "$a" ]
+then
+    echo " $a Directory exists."
+else
+    echo " $a Directory  not found."
+fi
+
+2) Check if a file exists in the current directory.
+
+#!/bin/bash
+pwd
+ls
+read -p "Enter the file name which u want to search in this current directory:" t
+if [ -f "$t" ]
+then
+        echo "$t this file is exist in this current folder"
+else
+        echo " $t file is not exist in this current folder"
+fi
+
+3) Check if a number is positive, negative, or zero.
+
+#!/bin/bash
+read -p "Enter any number for check positive number or negative number or zero:" n
+if [ "$n" -gt 0 ]
+then
+        echo " $n is positive number "
+elif [ "$n" -lt 0 ]
+then
+        echo "$n is negative number"
+else
+        echo "$n is zero"
+fi
+
+4) Check if a given string is empty or not.
+
+#!/bin/bash
+read -p "Enter any name:" n
+if [ -z "$n" ]
+then
+        echo " u r not entered any letter"
+else
+        echo "you enter this letters $n"
+fi
+
+5) Checing Odd or Even numbers
+
+#!/bin/bash
+read -p "enter any number to check odd or even:" a
+if (( a % 2 == 0 ))
+then
+echo "$a is even number"
+else
+echo "$a is odd number"
+fi
+
